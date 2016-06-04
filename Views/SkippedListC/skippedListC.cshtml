@@ -1,0 +1,202 @@
+@{
+    Layout = "~/Views/Shared/_CLayout.cshtml";
+}
+
+@section topic{
+                <label style="color: blue">Skipped List</label>
+}
+
+@section dropdown{
+		<ul class="dropdown-menu">
+										
+										
+										
+                                        <li><a href="#">
+											Main Panel
+										</a></li>
+                                        <li><a href="#">
+											Back
+										</a></li>
+                                        <li><a href="#">
+											Add to Favourties
+										</a></li>
+                                        <li><a href="#">
+											Edit
+										</a></li>
+                                        <li><a href="#">
+											Delete Selection
+										</a></li>
+                                        <li><a href="#">
+											Delete All
+										</a></li>
+                                        <li><a href="#">
+											Start Test
+										</a></li>
+                                        
+										
+										
+										
+									</ul>
+}
+            
+			<div id="page-wrapper">
+                
+                        <div class = "col-md-12">
+                                    <form action="/SkippedListC/search">
+                            <br>
+                        <div class="col-md-3">
+                            
+                            <p style="color:blue; padding:5px 0px 0px 80px">Enter Key Word:</p>
+                            
+                       </div>
+                        
+                        
+                        <div class="col-md-2">
+                        <input class="form-control" id="SearchWord" name="SearchWord" type="text">
+                            
+                        </div>
+                    
+                            
+                    <div clas="col-md-1">
+                            <input type="image" src="~/Content/images/search.png" width="20" alt="Submit" />
+                            
+                  
+                        </div>
+                        
+                         </form>   
+                      </div>
+           
+                        
+             
+                    
+                    
+                    <br>
+                         
+                       <div class="col-md-12">
+                       
+					   <div class="col-md-10 col-md-offset-1">
+						 <div class="span3">
+                                  <table class="table table-bordered">
+                                    <tbody>
+                                           
+                                        <th width="30%">Word</th>
+                                         <th width="10%">Select</th>
+                                      
+                                        <th width="10%">Word Id</th>
+                                        <th width="30%">Answer</th>
+                                       
+                                        @try
+                                        {
+                                            foreach (var w in ViewBag.allWords)
+                                            {
+                                        
+                                        <tr>
+                                            
+                                            
+                                        <td>@w.Word</td>
+                                        
+                                        <td  width="10%"  style="text-align: center;"><input type=checkbox /></td>
+                                        
+                                        <td width="10%">@w.WordId</td>
+                                        <td width="10%">@w.Definition</td>
+                                      
+                                       	
+                                        </tr>}
+                                        }
+                                        catch (Exception e) { }
+                                        
+                                    </tbody>
+                             </table>
+                </div>
+                            </div>
+                
+                 
+
+                  
+                    
+                        
+                    
+        
+                    </div>
+                <div class="col-md-1 col-md-offset-4">
+                         <label>Select All</label>
+                    
+                    </div>
+                        
+                    <div class="col-md-1 " >
+                        <input type="checkbox"/>
+                     
+                        
+                    </div>
+                    <div class="col-md-2">
+                        <label>1 2 3 4 5 6 >></label>
+                    </div>
+                  
+
+                
+
+                        
+                    
+                    <div class="col-md-11 col-md-offset-3">
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+    <form>
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+    </form>
+  </div>
+  				</div>		
+				</div>
+			</div>
+		</div>

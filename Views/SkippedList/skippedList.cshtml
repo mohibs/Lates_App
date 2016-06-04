@@ -1,0 +1,250 @@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section Change{
+	<label>Skipped List</label>
+}
+
+
+			<div id="page-wrapper">
+				<div class="graphs">
+                    <div class="row">
+                        
+                        <div class="col-md-2">
+                            
+                            <p style="color:blue; padding:5px 0px 0px 80px">Enter Word:</p>
+                            
+                       </div>
+                        
+                       @using (Html.BeginForm("FilterWords", "SkippedList"))
+                            {
+                               
+                        
+                        <div class="col-md-2">
+                            
+                            
+
+                        <input name="Filter" id="Filter" class="form-control" id="ex1" type="text">
+                            
+                        </div>
+                        
+                          <div clas="col-md-2">
+                             <input type="submit" value="Search" >
+                            <img  src="~/Content/images/search.png" width="30" alt="Submit" />
+                  
+                        </div>
+                          }
+                        
+                        
+                        
+                        
+                        
+                      
+                    
+                             
+                    </div>
+                    <br>
+                         
+                    <div class="col-md-12">
+                       
+					   <div class="col-md-4 col-md-offset-1">
+						
+                           <table class="tableO">
+                                    <tbody><tr>
+
+                                        <th align="center"><a href="#"> Word</a></th>
+                                        <th><a href="#">Select</a></th>		
+                                        <th><a href="#">Overall %</a></th>
+                                    </tr>
+                                   @foreach(var x in ViewBag.allWords)
+                                        {
+                                    <tr>
+
+                                        <td>@x.Word</td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td>@x.WordId</td>
+                                    </tr>
+                                        }
+                                       @* <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                         </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                             </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                     </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                 </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>*@
+                                 
+                                    </tbody>
+                             </table>
+                
+                    </div>
+
+                    <div class="col-md-5">
+                        <label>DataBase Word</label>
+                        <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input" value="@ViewBag.word"/>
+                        <br>
+                        <br>
+                         <label> Pronounciation</label>
+                        <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input" value="@ViewBag.pro"/>
+                        <br>
+                        <br>
+                         <label> Captured Phrase</label>
+                        <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input" value="@ViewBag.phrase"/>
+                            
+                        <br />
+                        <br/>
+                         <label> Hint</label>
+                        <input type=text class="form-control1" id="focusedinput" placeholder="Default Input" value=" @ViewBag.hint" />
+                        <br>
+                        <br>
+                         <label> Defination</label>
+                        <textarea type="text" class="form-control1" id="focusedinput" placeholder="Default Input">  @ViewBag.def </textarea>
+                    </div>
+                    <div class="col-md-1">
+               
+                    </div>
+                    
+        
+                    <div class="col-md-1 thisis">
+                        
+                      <p>Select All</p>
+                    </div>
+                        
+                    <div class="col-md-1">
+                        <input type="checkbox"/>
+</div>
+                  
+                    <div class="col-md-2">
+                        <p>1 2 3 4 5 6 >></p>
+</div>
+
+                
+
+                        
+                    
+                    <div class="col-md-11 col-md-offset-3">
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+    <form>
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+    </form>
+  </div>
+  				</div>		
+				</div>
+			</div>
+		</div>

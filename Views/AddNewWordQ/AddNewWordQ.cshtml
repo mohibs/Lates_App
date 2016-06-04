@@ -1,0 +1,134 @@
+﻿@model lates.Models.Quester.tblWordsQ
+
+@{
+    Layout = "/Views/Shared/_QLayout.cshtml";
+}
+
+@section DD{
+        <ul class="dropdown-menu">
+										
+										
+										<li><a href="#">
+											Back
+										</a></li>
+                                        <li><a href="#">
+											Main Panel
+										</a></li>
+                                        <li><a href="#">
+											Show All
+										</a></li>
+                                        </a></li>
+										<li><a href="#">
+											Delete List
+										</a></li>
+										<li><a href="#">
+											Delete Selection
+										</a></li>
+										<li><a href="#">
+											Synonym
+										</a></li>
+										<li><a href="#">
+											Edit
+										<li><a href="#">
+											Create Test
+										</a></li>
+										
+										<li><a href="#">
+    								         Add to Favourties
+										</a></li>
+										<li><a href="#">
+											Add to Skipped list
+										
+                                            </a>
+                                            </li>
+                                           
+										
+									</ul>
+    }
+
+@section ChangeQ{
+        <label>Add New Word</label>
+    }
+			<div id="page-wrapper">
+				<div class="graphs">
+                   
+                    <br>
+                    
+                        <form action="/AddNewWordQ/AddNewWord/">
+                         
+                            <div class="col-md-12">
+
+
+
+                                   <div class="col-md-3 col-md-offset-1">
+
+                                      <label> Please Enter A New Folder Name Phrase</label>
+                                    <input type="text" class="form-control1" id="folder" name="folder" placeholder="Default Input">
+                                       
+                                       <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                       
+
+                                       <label> Or , Choose Existing Word</label>
+                                    <input type="text" class="form-control1" id="existing" name="existing" placeholder="Default Input">
+                                    <br>
+                                    <br>
+                                     <br>
+                                     <label>@ViewBag.crazyMsg</label>  
+                                </div>
+                               
+
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <label>DataBase Question</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ques" name="ques" placeholder="Default Input"> </textarea>
+                                    <br>
+                                    <br>
+                                     <label> Hint</label>
+                                    <input type="text" class="form-control1" id="hint" name="hint" placeholder="Default Input">
+                                    <br>
+                                    <br>
+                                     <label> Show Answer</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ans" name="ans" placeholder="Default Input"> </textarea>
+                                    <br>
+                                    <br>
+                                     <label> Show Addition Information</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="addInfo" name="addInfo" placeholder="Default Input"> </textarea>
+                                 
+                                    <br>
+                                   <input type="submit" value="Add" />
+                                    <br>
+                                    <br>
+                            </div>
+                        </form>
+                              
+
+                                    <div class="col-md-11 col-md-offset-3">
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#">Wikipedia</a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> Calculator</a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#">  Maps </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                  <u><a href="#"> Currency </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> WorldClock </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> Translator </a></u>
+                                                    </div>
+                                    </div>
+
+
+                            
+  				</div>		
+				</div>
+			</div>
+		</div>

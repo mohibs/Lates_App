@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8cd596af71348dea681029a21c60f04" Name="Diagram1">
+        <EntityTypeShape EntityType="QuesterModel.tblCategoryQ" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblNotesQ" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblSubCategoryQ" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblTestsQ" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblUserQ" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblWordsQ" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_LastSharedTestQ" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_LastSharedWordsQ" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_PaymentsQ" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_ReviewWordQ" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_SharedTestQ" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_SharedWordsQ" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tbl_TestCompletedQ" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblExamNotesQ" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblRandomDefinitionsQ" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuesterModel.tblRandomWordsQ" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <AssociationConnector Association="QuesterModel.FK_tblNotes_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="QuesterModel.FK_tblTests_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="QuesterModel.FK_tblRandomDefinitions_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="QuesterModel.FK_tblRandomWords_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="QuesterModel.FK_tblWords_tblUsers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuesterModel.tblTestWordsQ" Width="1.5" PointX="5.25" PointY="12.25" />
+        <AssociationConnector Association="QuesterModel.FK_tblTestWords_tblTests" />
+        <EntityTypeShape EntityType="QuesterModel.tblUserDetailsQ" Width="1.5" PointX="3" PointY="18.875" />
+        <AssociationConnector Association="QuesterModel.FK_tblUserDetails_tblUser" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

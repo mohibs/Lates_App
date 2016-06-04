@@ -1,0 +1,222 @@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section Change{
+	<label>Exam Archive</label>
+}
+
+			<div id="page-wrapper">
+				<div class="graphs">
+                    <div class="row">
+                        
+                        <div class="col-md-3 col-md-offset-1">
+                            
+                            <p style="color:blue; padding:5px 0px 0px 80px">In your last COMPLETED Test you scored: </p>
+                            
+                       </div>
+                        
+                        
+                        <div class="col-md-1">
+                        <input class="form-control" id="ex1" name="lastTest" type="text" value="@ViewBag.lastResult">
+                            
+                        </div>
+                        
+                          <div clas="col-md-2">
+                           
+                    <p style="color:blue; padding:5px 0px 0px 80px">Your overall average score To date is: </p>
+                           
+                        
+                        </div>
+                        
+                        <div class="col-md-1">
+                        <input class="form-control" id="ex2" name="overall" type="text" value="@ViewBag.overallRating">
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                      
+                    
+                             
+                    </div>
+                    <br>
+                         
+                    <div class="col-md-12">
+                       
+					   <div class="col-md-4 col-md-offset-4">
+						
+                           <table class="tableO">
+                                    <tbody><tr>
+
+                                        <th align="center"><a href="#"> Exam</a></th>
+                                        <th><a href="#">Select</a></th>		
+                                        <th><a href="#">Overall %</a></th>
+                                    </tr>
+                                    @foreach(var t in ViewBag.testList)
+                                    {
+                                        <tr>
+                                            <td>@t.TestId</td>
+                                            <td style="text-align: center;"><input type=checkbox /></td>		
+                                            <td>@t.Score</td>
+                                        </tr>
+                                    }
+                                        @*<tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                                         </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                             </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                     </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>
+                 </tr>
+                                        <tr>
+
+                                        <td></td>
+                                        <td style="text-align: center;"><input type=checkbox /></td>		
+                                        <td></td>
+                                    </tr>*@
+                                 
+                                    </tbody>
+                             </table>
+                
+                    </div>
+</div>
+                       
+                    <div class="col-md-1 thisis2">
+                        
+                      <p>Select All</p>
+                    </div>
+                        
+                    <div class="col-md-1">
+                        <input type="checkbox"/>
+</div>
+                  
+                    <div class="col-md-2">
+                        <p>1 2 3 4 5 6 >></p>
+</div>
+
+                
+
+                        
+                    
+                    <div class="col-md-11 col-md-offset-3">
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+    <form>
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+    </form>
+  </div>
+  				</div>		
+				</div>
+			</div>
+		</div>

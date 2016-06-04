@@ -1,0 +1,254 @@
+﻿@model IEnumerable<lates.Models.Quester.tblWordsQ>
+@using System.Web.Mvc.Html;
+
+@{
+    Layout = "/Views/Shared/_QLayout.cshtml";
+}
+
+
+
+@section DD{
+        <ul class="dropdown-menu">
+										
+										
+										
+                                        <li><a href="#">
+											Main Panel
+										</a></li>
+                                        <li><a href="@Url.Action("AddToMyDataBase", "ShowAllWordsQ")">
+											Add to my DataBase
+										</a></li>
+                                        
+										
+										
+										
+									</ul>    
+    }
+
+@section ChangeQ{
+        <label>Show All Words</label>
+    }
+
+
+			<div id="page-wrapper">
+
+                        <div class = "col-md-12">
+                            <br>
+                        <div class="col-md-2">
+                            
+                            <p style="color:blue; padding:5px 0px 0px 80px">Enter Key Word:</p>
+                            
+                       </div>
+                        
+                        
+                        <div class="col-md-2">
+                        <input class="form-control" id="ex1" type="text">
+                            
+                        </div>
+                            
+                    <div clas="col-md-1">
+                            <input type="image" src="~/Content/images/search.png" width="20" alt="Submit" />
+                            
+                  
+                        </div>
+                        
+                        
+                         
+                        <div class="col-md-2 col-md-offset-1">
+                        
+                                <label>Selected Words: </label>
+                        </div>
+                   <div class="col-md-2">
+                            
+                            <p style="color:blue; padding:5px 0px 0px 80px">Enter Key Word:</p>
+                            
+                       </div>
+                        
+                        <form action="/ShowAllWordsQ/Search/">
+                        <div class="col-md-2">
+                        <input class="form-control" id="ex1" type="text" name="SearchWord">
+                            
+                        </div>
+                            
+                    <div clas="col-md-1">
+                      
+                            <input type="submit" value="Search" src="~/Content/images/search.png" width="20" alt="Submit" />
+                        @* <input type="image"  src="~/Content/images/search.png" width="20" alt="Submit" />*@
+                           
+                        </form>
+                            <u>Clear</u>
+                  
+                        </div>
+                        
+                            
+                      </div>
+           
+                        
+             
+                    
+                    
+                    <br>
+                         
+                       <div class="col-md-12">
+                       
+					   <div class="col-md-10 col-md-offset-1">
+						 <div class="span3">
+
+
+
+                            
+                             
+                                  <table class="table table-bordered">
+                                    <tbody>
+                                         @using (Html.BeginForm("AddToMyDataBase", "ShowAllWordsQ", FormMethod.Post))
+                             {
+                                           
+                                        <th>Question</th>
+                                        <th >Category</th>
+                                        <th width="10%">Select</th>
+                                        <th  width="20%">Answer</th>
+                                        <input  type="checkbox" id="checkboxall" value="Select All"/>
+                                       
+                                        foreach(var x in ViewBag.allwords)
+
+                                        { 
+                                        <tr>
+                                            
+                                            
+                                            <td>@x.Word</td>
+                                             <td>@x.CategoryId</td>
+                                          
+                                            <td width="10%" style="text-align: center;">
+                                                <input  type="checkbox" class="chkCheckBox" value="@x.check"  name="WordId" id="WordId"/>
+                                              
+                                                  
+
+                                            </td>
+                                           
+                                            <td width="20%">@x.Definition</td>
+                                       	
+                                        </tr>
+                                        }
+                                             
+                                       
+                                        <input type="submit" value="click" />
+
+                                        
+                                        
+                                        
+                                       
+                                        
+                                        <tr>
+                                            
+                                            
+                                            <td></td>
+                                             <td></td>
+                                            <td width="10%" style="text-align: center;"><input type=checkbox /></td>
+                                           
+                                            <td width="20%"></td>
+                                       	
+                                        </tr>
+                                       
+                                          
+                                        
+                                        
+                                        
+                                    
+                                    
+                                         }
+                                 
+                                    </tbody>
+                             </table>
+                </div>
+                            </div>
+                
+                 
+
+                  
+                    
+                        
+                    
+        
+                    </div>
+                <div class="col-md-1 col-md-offset-7">
+                         <label>Select All</label>
+                    
+                    </div>
+                        
+                    <div class="col-md-1 " >
+                        <input type="checkbox"/>
+                     
+                        
+                    </div>
+                    <div>
+                        <label>1 2 3 4 5 6 >></label>
+                    </div>
+                  
+
+                
+
+                        
+                    
+                    <div class="col-md-11 col-md-offset-3">
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+    <form>
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+    </form>
+  </div>
+  				</div>		
+				</div>
+			</div>
+		</div>

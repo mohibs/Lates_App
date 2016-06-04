@@ -1,0 +1,176 @@
+@{
+    Layout = "~/Views/Shared/_CLayout.cshtml";
+}
+
+@section topic{
+                <label style="color: blue">Add New Question</label>
+}
+
+@section dropdown{
+		<ul class="dropdown-menu">
+										
+										<li><a href="#">
+											Main Panel
+										</a></li>
+										<li><a href="#">
+											Back
+										</a></li>
+                                        
+                                        <li><a href="#">
+											Show Answer
+										</a></li>
+                                        <li><a href="#">
+    								         Add to Favourties
+										</a></li>
+										<li><a href="#">
+											Add to Skipped list
+										
+                                            </a>
+                                            </li>
+                                        </a></li>
+										<li><a href="#">
+											Edit
+										</a></li>
+										<li><a href="#">
+											Save
+										</a></li>
+										<li><a href="#">
+											Delete
+										</a></li>
+										><a href="#">
+											Show All Questions
+										</a></li>
+										
+										
+                                           
+										
+									</ul>
+}
+
+            <form action="/AddNewQuestionC/AddNewWord">
+
+			<div id="page-wrapper">
+				<div class="graphs">
+                   
+                    <br>
+                    
+                   
+                         
+                            <div class="col-md-12">
+
+
+
+                                   <div class="col-md-3 col-md-offset-1">
+
+                                      <label> Please Enter A New Folder Name Phrase</label>
+                                    <input type="text" class="form-control1" id="folder" name="folder" placeholder="Default Input">
+                                       
+                                       <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                       
+
+                                       <label> Or , Choose Existing Word</label>
+                                    <input type="text" class="form-control1" id="existing" name="existing" placeholder="Default Input">
+
+                                       <br>
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                       <label>Select Correct Option</label>
+                                       <select id="correctOption" name="correctOption">
+                                          <option value="A">A</option>
+                                          <option value="B">B</option>
+                                          <option value="C">C</option>
+                                          <option value="D">D</option>
+                                        </select>
+                                    
+                                       <br>
+                                        <br>
+                                       <input type="submit" value="Add Question" />
+
+                                       <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                       <label style="color:red">@ViewBag.Success</label>
+                                       
+                                </div>
+                               
+
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <label>Question</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ques" name="ques" placeholder="Default Input"> </textarea>
+                                    <br>
+                                    <br>
+                                     <label> Answer A</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ansA" name="ansA" placeholder="Default Input"> </textarea>
+                                    <br>
+                                    <br>
+                                     <label> Answer B</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ansB" name="ansB" placeholder="Default Input"> </textarea>
+                                    
+                                    <br>
+                                    <br>
+                                     <label> Answer C</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ansC" name="ansC" placeholder="Default Input"> </textarea>
+                                   <label> Answer D</label>
+                                    <textarea  style="height: 85px; width: 480px;"type="text" class="form-control1" id="ansD" name="ansD" placeholder="Default Input"> </textarea>
+                            
+
+                            </div>
+                                
+                                @*<div class="col-md-1">
+                                   
+                                    <div class="row">
+                                    <input type="checkbox" style="margin: 70px 0px 50px 20px;"/>
+                                    </div>
+                                      <div class="row">
+                                    <input type="checkbox" style="margin: 70px 0px 50px 20px;"/>
+                                    </div>
+                                      <div class="row">
+                                    <input type="checkbox" style="margin: 70px 0px 50px 20px;"/>
+                                    </div>
+                                      <div class="row">
+                                    <input type="checkbox" style="margin: 70px 0px 50px 20px;"/>
+                                    </div>
+                                      <div class="row">
+                                    <input type="checkbox" style="margin: 70px 0px 50px 20px;"/>
+                                    </div>
+                                    
+                                    
+                                </div>*@
+                              
+
+                                    <div class="col-md-11 col-md-offset-3">
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#">Wikipedia</a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> Calculator</a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#">  Maps </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                  <u><a href="#"> Currency </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> WorldClock </a></u>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                   <u><a href="#"> Translator </a></u>
+                                                    </div>
+                                    </div>
+
+
+                            
+  				</div>		
+				</div>
+			</div>
+		</div>
+
+        </form>

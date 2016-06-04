@@ -1,0 +1,199 @@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section Change{
+	<label style="color:purple">Show All Notes</label>
+}
+
+
+			<div id="page-wrapper">
+				<div class="graphs">
+                   
+                
+                       
+					 <div class="col-md-11 col-md-offset-1" style="height:400px;width:500px">
+                         
+                     <div class="bordertop">
+                         <div class="col-md-12">
+                         <div class="col-md-3 col-md-offset-5">
+                             <br>
+                             <br>
+                             <br>
+                            
+                             <br>
+                             <h1 style="color:blue">Notes</h1>
+                             </div>
+                         </div>
+                        <div class = "col-md-12">
+                         
+                           
+                             <div class="col-md-1 col-md-offset-5">
+                             
+                              <p>Title</p>
+                            </div>
+
+                            <form action="/Notes/search">
+                                <div class="col-md-4">
+                             
+                             <input type="text" class="form-control1" id="focusedinput" name="focusedinput" placeholder="@ViewBag.initial">
+                            </div>
+                            <div class="col-md-2">
+                           
+                                <input type="image" src="~/Content/images/search.png" alt="Submit Form" width="40"/>
+                            </div>
+                           </form>
+
+                         </div>
+                         <div class="col-md-12" style="height:10%;">
+                             
+                             <br>
+                             <br>
+                             <div class="bordertop">
+                             <div class="col-md-10 col-md-offset-1" >
+                                 
+                                  <table class="table table-bordered">
+                                    <tbody><tr>
+
+                                        <th align="center" width="100"><a href="#"> Date</a></th>
+                                        <th width="60"> <a href="#" >Select</a></th>		
+                                        <th><a href="#">Title</a></th>
+                                    </tr>
+                                   
+                                    @foreach(var v in ViewBag.allNotes)
+                                    {
+                                        <tr>
+                                            <td width="100">@System.DateTime.Now</td>
+                                            <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                            <td>@v.Title</td>
+                                        </tr>
+                                    }
+                                             @*<tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                                    <td width="100"></td>
+                                                    <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                                    <td></td>
+                                            </tr>
+                                                   <tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                        <td width="100"></td>
+                                        <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                        <td></td>
+                                        </tr>
+                                             <tr>
+
+                                                    <td width="100"></td>
+                                                    <td style="text-align: center;" width="60"><input type=checkbox /></td>		
+                                                    <td></td>
+                                            </tr>*@
+                     
+                                 
+                                    </tbody>
+                             </table>
+                                 </div>
+                </div>
+                            </div>
+                         </div>
+                    </div>
+            
+                        </div>
+                        
+                      
+                    
+                    <div class="col-md-11 col-md-offset-3">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+    <form>
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+    </form>
+  </div>		
+				</div>
+			</div>
+		</div>

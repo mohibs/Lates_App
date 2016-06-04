@@ -1,0 +1,239 @@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section Change{
+	<label style="color: blue">Add New Word</label>
+}
+
+
+			<div id="page-wrapper">
+				<div class="graphs">
+					
+						<div class="tab-content">
+                        
+						<div class="tab-pane active" id="horizontal-form">
+							
+                            <form action="/AddNewWord/addWord" class="form-horizontal">
+                                    <br>
+                                    <br>
+                                    
+                                    <div class="col-md-2">
+                                </div>
+                                 
+                                    <div class="col-sm-8">
+                                           <br>
+                                    <p>Database Word</p>
+                                    
+                                    
+										<input type="text" class="form-control1" id="word" name="word" placeholder="Default Input"/>
+                                        </div>
+                                        
+                                 		
+								</div>
+                                <div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                           <br>
+									<p>Pronounication</p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="pronounce" name="pronounce" placeholder="Default Input"/>
+                                        </div>
+                                        
+								</div>
+                                
+                                <div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+                                           <br>
+									<p>Captured Phrase</p>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="phrase" name="phrase" placeholder="Default Input"/>
+                                        
+									</div>
+                                 
+								
+								</div>
+                                
+                                <div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+                                           <br>
+									<p>Hint</p>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="hint" name="hint" placeholder="Default Input"/>
+                                        
+									</div>
+	
+								</div>
+                                
+                                <div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+                                           <br>
+									<p>Definition</p>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" id="def" name="def" placeholder="Default Input" class="form-control1"/>
+                                        <br><br>
+                                         
+                                        </div>
+                                    
+                                    <div class="col-md-2">
+                                        <input type="checkbox" id="shareOnline" name="shareOnline"/> Share Online
+                                    </div>
+                                      <input type="submit" value="Add Word"/><p>@ViewBag.val</p>
+									</div>
+                                    
+                                    
+                                    <div class="row">   
+                                    </div>
+                                                                        
+                                </form>
+                                
+                                 <!--<div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<div class="checkbox-inline1"><label><input type="checkbox"> Unchecked</label></div>
+										<div class="checkbox-inline1"><label><input type="checkbox" checked=""> Checked</label></div>
+										<div class="checkbox-inline1"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+										<div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+									</div>
+									</div>-->
+                                    
+                                    
+                                   <!-- <div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<select name="selector1" id="selector1" class="form-control1">
+                                   		<option>Lorem ipsum dolor sit amet.</option>
+										<option>Dolore, ab unde modi est!</option>
+										<option>Illum, fuga minus sit eaque.</option>
+										<option>Consequatur ducimus maiores voluptatum minima.</option>
+                                        </select>
+									</div>
+									</div>-->
+                                    
+                                    <!--<div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label">Multiple Select</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<select multiple="" class="form-control1">
+											<option>Option 1</option>
+											<option>Option 2</option>
+											<option>Option 3</option>
+											<option>Option 4</option>
+											<option>Option 5</option>
+										</select>
+									</div>
+									</div>-->
+                                    
+                                    <!-- <div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label">Textarea</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
+									</div>-->
+									
+
+								<!--<div class="form-group">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label">Radio</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<div class="radio block"><label><input type="radio"> Unchecked</label></div>
+										<div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
+										<div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+										<div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+									</div>
+                                    </div>-->
+									
+						</div>
+					</div>
+                    
+                    <div class="col-md-11 col-md-offset-3">
+									<div class="col-sm-1">
+                                   <u><a href="#">Wikipedia</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Calculator</a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#">  Maps </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                  <u><a href="#"> Currency </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> WorldClock </a></u>
+                                    </div>
+                                    <div class="col-sm-1">
+                                   <u><a href="#"> Translator </a></u>
+                                    </div>
+                                    </div>
+					
+					<div class="bs-example" data-example-id="form-validation-states">
+ 
+    
+    							<!--<div class="form-group has-success">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with success</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputSuccess1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-warning">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with warning</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										<input type="text" class="form-control1" id="inputWarning1">
+									</div>
+                                    </div>-->
+                                    
+                                    <!--<div class="form-group has-error">
+                                <div class="col-sm-8 col-lg-offset-2">
+									<label class="col-sm-2 control-label label-input-lg">Input with error</label>
+                                    </div>
+                                    <br>
+                                    <br>
+									<div class="col-sm-8 col-lg-offset-2">
+										 <input type="text" class="form-control1" id="inputError1">
+									</div>
+                                    </div>-->
+
+  </div>
+  						
+				</div>
+			</div>
+		</div>
